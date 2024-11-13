@@ -16,9 +16,22 @@ function onDeviceReady() {
     }
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	
 	Promise.all([
 		setTimeout(function(){openInAppBrowser()},1000),
 	]).then()
+	/*
+	var latitude = -26.902038;
+    var longitude = -48.671337;
+    var accuracy = 1;
+    var altitude = 0;
+    
+    mockGeolocation.setMock([latitude, longitude, accuracy, altitude], function(suc){
+          console.log(suc);
+		  
+        }, function(err){
+          alert(err);
+        });*/
 }
 
 function onBackKeyDown(){		
